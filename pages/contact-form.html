@@ -1,0 +1,24 @@
+<div class="contact-form">
+  <div class="contact-form__group">
+    <label class="contact-form__label">お名前<span class="red small">（必須）</span></label>
+    [text* your-name class:contact-form__textfield placeholder "例） 山田 太郎"]
+  </div>
+  <div class="contact-form__group">
+    <label class="contact-form__label">メールアドレス<span class="red small">（必須）</span></label>
+    [email* mail class:contact-form__textfield placeholder "例） example@email.com"]
+  </div>
+  <div class="contact-form__group">
+    <label class="contact-form__label">件名<span class="red small">（必須）</span></label>
+    [text* title class:contact-form__textfield placeholder "例） インタビューの依頼について"]
+  </div>
+  <div class="contact-form__group">
+    <label class="contact-form__label">内容<span class="red small">（必須）</span></label>
+    [textarea* message class:contact-form__textfield placeholder "本文をご入力ください"]
+  </div>
+  <div class="contact-form__submit">
+    <div class="contact-form__submit-button">
+      メッセージを送信
+      [submit]
+    </div>
+  </div>
+</div>

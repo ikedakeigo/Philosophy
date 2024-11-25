@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+#ja body {
+	font-size: 16px;
+	line-height:1.7;
+}
+#en body {
+	font-size: 16px;
+}
+#fsize3{color:#000!important;}

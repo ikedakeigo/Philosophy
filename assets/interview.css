@@ -1,0 +1,244 @@
+body.interview {
+	background-color: #001E62;
+}
+.interview .only_page-943_pc {
+	display: block;
+}
+.interview .detailMain {
+	background: url("/wp-content/themes/MyPhilosophy/img/philosophy/new_philosophy/bg_kawabata.png") no-repeat !important;
+	-webkit-background-size: cover !important;
+	background-size: cover !important;
+	margin-bottom: 50px !important;
+}
+.interview #main {
+	width: 100%;
+}
+.interview #sidebar {
+	display: none;
+}
+.interview .slideshow {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/*.page-912 .slideshow img {
+	display: block;
+	margin: 0 auto;
+}*/
+.interview #comment {
+	max-width: 1000px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.interview .timeflow {
+	padding: 2em;
+	margin-bottom: 30px;
+	background-color: #e3e5eb;
+}
+.interview .timeflow ul {
+	width: 100%;
+	box-sizing: border-box;
+}
+.interview .timeflow li {
+	position: relative;
+	padding-left: 2%;
+	counter-increment: section;
+	margin-bottom: 2.5em;
+}
+.interview .timeflow li:before {
+	content: counter(section);
+	position: absolute;
+	top: 4%;
+	left: -1%;
+	background: #696e78;
+	color: #fff;
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+    font: 400 15px/22.5px 'Open Sans', sans-serif;
+    text-align: center;
+}
+.interview .timeflow li:after {
+	content: "";
+	position: absolute;
+	bottom: -1.5em;
+	left: 47%;
+	box-sizing: border-box;
+	width: 8px;
+	height: 8px;
+	border: 8px solid transparent;
+	border-top: 8px solid #696e78;
+}
+.interview .timeflow li:last-child:after {
+	content: none;
+}
+.interview .fb-comments,
+.interview .fb-page,
+.cB + .taC,
+.mainBottomBnr01 {
+	display: none;
+}
+.interview .message_area {
+	padding: 30px;
+	margin: 2em 0;
+	background-color: #e4e7ef;
+}
+.interview .message_title {
+	text-align: center;
+	font-size: 0.75rem;
+	color: #001E62;
+	margin: 1em 0;
+	font-family: "Times New Roman", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+.interview .message_title span {
+	display: inline;
+	position: relative;
+}
+.interview .message_title span:before {
+	content: "";
+	background: url('/wp-content/themes/MyPhilosophy/img/philosophy/new_philosophy/message_ornament.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	width: 142px;
+	height: 26px;
+	position: absolute;
+    top: -1em;
+    left: -13.5em;
+}
+.interview .message_title span:after {
+	content: "";
+	background: url('/wp-content/themes/MyPhilosophy/img/philosophy/new_philosophy/message_ornament_02.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	width: 142px;
+	height: 26px;
+	position: absolute;
+    top: -1em;
+    right: -13.5em;
+}
+.interview .message {
+	text-align: center;
+	margin-top: 0;
+}
+.interview .tar {
+	text-align: right;
+	margin-bottom: 0;
+}
+.interview .sns-button div.col_3 {
+	width: 33.3%;
+}
+.interview .sns-button div.col_3:nth-of-type(4) {
+	display: none;
+}
+.interview .container iframe {
+	width: 100%;
+}
+#content .presents {
+	display: none;
+}
+.interview #content .presents {
+	display: block;
+	padding: 1em;
+	background-color: #1D1D1D;
+}
+.interview #content .presents img {
+	display: block;
+	margin: 0 auto;
+	max-width: 200px;
+}
+.interview .detailMain {
+	margin-bottom: 0 !important;
+}
+.interview .detailMain .logo {
+	padding: 40px 0;
+}
+.recommend {
+	background-color: #e2e3e2;
+	padding: 30px;
+	margin-bottom: 2em;
+}
+.recommend h3 {
+	color: #292E29;
+	text-align: center;
+	margin: 0;
+}
+.recommend p {
+	margin-bottom: 0;
+}
+.recommend a {
+	text-decoration: underline;
+}
+.page-924 .slideshow img {
+	display: block;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+	.interview .detailMain {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.interview .only_page-943_pc {
+		display: none;
+	}
+	.interview .only_page-943_sp {
+		display: block;
+	}
+	.interview .timeflow li {
+		padding-top: 2em;
+	}
+	.interview .timeflow li:last-child {
+		margin-bottom: 0;
+	}
+	.interview .timeflow li:before {
+		top: 0;
+		left: 0;
+	}
+	.interview .menu-button {
+		display: none !important;
+	}
+	.interview #content .presents img {
+		max-width: 160px;
+	}
+	.interview .detailMain .logo {
+		padding: 20px 0;
+	}
+	.interview .message_title span:before {
+		content: "";
+		background: url('/wp-content/themes/MyPhilosophy/img/philosophy/new_philosophy/message_ornament.png');
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 71px;
+		height: 13px;
+		position: absolute;
+	    top: -0.5em;
+	    left: -8.5em;
+	}
+	.interview .message_title span:after {
+		content: "";
+		background: url('/wp-content/themes/MyPhilosophy/img/philosophy/new_philosophy/message_ornament_02.png');
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 71px;
+		height: 13px;
+		position: absolute;
+	    top: -0.5em;
+	    right: -8.5em;
+	}
+	.interview #main h3 br {
+		display: none;
+	}
+}
+
+/*** Responsive ***/
+@media screen and (max-width:767px) {
+	.pc {
+		display: none;
+	}
+}
+@media screen and (min-width:768px) {
+	.sp {
+		display: none;
+	}
+}

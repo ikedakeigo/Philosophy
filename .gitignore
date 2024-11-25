@@ -1,0 +1,43 @@
+# WordPress core files
+wp-config.php
+.htaccess
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Composer vendor directory
+vendor/
+
+# SASS cache
+.sass-cache/
+
+# WordPress uploads
+wp-content/uploads/
+
+# WordPress plugins
+wp-content/plugins/
+
+# WordPress themes
+wp-content/themes/*
+
+# Ignore everything in the root except the "wp-content" directory.
+*
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "themes" directory.
+wp-content/*
+!wp-content/themes/
+
+# Ignore everything in the "themes" directory, except the "MyPhilosophy" theme.
+wp-content/themes/*
+!wp-content/themes/MyPhilosophy/
+
+dist/*
+img

@@ -1,0 +1,148 @@
+/*--------------------------------------------------------
+Responsive elements
+--------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+                h1 { font-size: 48px;}
+                .one-text { font-size: 16px;}
+                #slidecaption { font-size: 68px }
+                .slidedescription { font-size: 12px }
+                .slider-text { bottom: 60px; } 
+                .bg1, .bg3 { background-size: 150%;}
+                .bg2 { background-size: 1280px;}
+                #contact { background-size: 1437px; }
+				
+				#footer{height:200px;}
+} 
+
+@media only screen and (width: 1024px) {
+                #contact { background-size: 1210px; }
+                .card { margin: 60px 0 0 0; }
+				h1 { font-size: 48px;}
+				
+} 
+ 
+@media only screen and (max-width: 767px) {
+	.logo{
+		margin-left:15px;}
+	#footer{
+		height:150px;}
+	#homepage{
+		position:static;
+		margin-bottom:0;}
+		#homepage .container{
+		position:static;}
+	
+                h1 { font-size: 44px; line-height: 1; }
+                .one-text { font-size: 14px; }
+                .project-title { font-size: 14px; }
+                .project-description { font-size: 11px; }
+                #slidecaption { font-size: 36px}
+                .lines { font-size: 24px; }
+                #contact { height: auto;}
+                .contact-social-icon img { width: 40px; height: 40px; }
+                .contact-social-icon li { margin: 0 5px 0 5px; }
+                .logo { width: 180px; height: auto; }
+               .mnav{
+				   margin-top:6px;}
+			   .sub-logo{
+					width:180px;
+					float:right!important;
+					margin-top:3px;
+					clear:none;}
+                #main-nav { height: 30px; }
+                #homepage { margin-bottom: -30px; }
+                .slider-text  { bottom: 50px; min-height: 80px; }
+                #content { padding-top: 32px; padding-bottom: 40px; }
+                #prevslide, #nextslide{ position:absolute; height:15px; width:15px; top:50px; margin-top:-21px; opacity:0.6; }
+                #culture h4 { padding-top: 27px; }
+                .bg1, .bg2, .bg3 { background-size: 1000px; }
+               
+                #prevslide{ right:55px; background:url('../images/back-15.png'); }
+				#nextslide{ right:30px; background:url('../images/forward-15.png'); }
+				#contact { background-size: 720px; }
+	
+	dl.column dt, dl.column dd{
+	 float:none;
+	 clear:both;
+	 width:auto;
+	 display:block;
+	 padding-left:0;
+	 width:100%;}
+
+.rp2-1-1{width:100%!important; clear:both;}
+.rp2-1-2{width:50%!important;}
+.rp2-1-3{width:33.3333333333%!important;}
+.rp2-2-3{width:66.6666666667%!important;}
+.rp2-1-4{width:25%!important;}
+.rp2-3-4{width:75%!important;}
+.rp2-inline{display:inline!important;}
+
+ .no-js #main-nav > ul, #main-nav .responsive-nav {
+display: block;
+}
+
+.tabs-nav {
+ border-top:none;
+}
+.tabs-nav li a {
+ padding: 10px 0;
+ width:100%;
+}
+.tabs-nav li {
+ margin:0 0 1px 0;
+ width:33%;
+ text-align:center;
+border-bottom:#eee;
+}
+.tab-content {
+	padding: 15px;
+}
+}
+	
+@media only screen and (max-width: 479px) {
+	
+	
+                .lines, .adress{ font-size: 18px; }
+                .slider-text  { bottom: 50px; min-height: 100px; }
+                #prevslide, #nextslide{ position:absolute; height:15px; width:15px; top:100px; opacity:0.6; }
+                #prevslide{ left:0; }
+				#nextslide{ left:25px; }
+				.logo { top: 20px; }
+				.rp-3show{
+					display:block}
+				img.imgR,img.imgL{
+	margin-right:auto;
+	margin-left:auto;
+	float:none;
+	max-width:100%;}
+	#footer{height:120px;}
+	.tab-content {
+	padding: 10px;
+}
+
+}
+
+@media only screen and (min-width: 1400px) {
+                nav .container,
+                #homepage .container,
+                #homepage .container
+                .sixteen.columns
+                {}
+
+                #main-nav { float: right; }
+                .slider-text { width: 100%; }
+                
+                #parallax1, #parallax2, #parallax3,
+                #parallax1 .vertical-text, #parallax2 .vertical-text,
+                #parallax3 .vertical-text, #parallax1 .pattern,
+                #parallax2 .pattern, #parallax3 .pattern
+                { height: 600px; }
+                
+                #prevslide, #nextslide{ position:absolute; height:30px; width:30px; top:210px; margin-top:-21px; opacity:0.6; }
+                .bg1, .bg2, .bg3 { background-size: 100%; }
+                
+    } 
+
+
+

@@ -1,0 +1,128 @@
+#logo,
+#header,
+#footer,
+#mobile-menu,
+#sidebar,
+.main-footer,
+.breadcrumbs,
+.tool-panel,
+#post-share,
+#post-share div,
+#post-share iframe,
+.sns-button,
+.fb-comments,
+.fb-page,
+.menu-button,
+.pf .box-text .textlink,
+.owl-pagination
+{
+	display:none!important;}
+.container,
+#main,
+#main-inner{
+	margin:0 auto!important;
+	float:none!important;
+	clear:both!important;
+	padding:0!important;
+	width: 600px!important;
+	background: #fff;
+	}
+	
+.col_1 { width:8.33333333333%!important; }
+.col_2 { width:16.6666666667%!important; }
+.col_3 { width:25.0%!important; }
+.col_4 { width:33.3333333333%!important; }
+.ie6 .column .col_4, .ie7 .column .col_4 { width:33%!important; }
+.col_5 { width:41.6666666667%!important; }
+.col_6 { width:50.0%!important; }
+.col_7 { width:58.3333333333%!important; }
+.col_8 { width:66.6666666667%!important; }
+.col_9 { width:75.0%!important; }
+.col_10 { width:83.3333333333%!important; }
+.col_11 { width:91.6666666667%!important; }
+.col_12 {
+	margin-left:0;
+	width:100%; }
+.col_6.center{margin:auto!important;width: 100%!important;}
+.column, .col_1,.col_2,.col_3,.col_4,.col_5,.col_6,.col_7,.col_8,.col_9,.col_10 ,.col_11 {
+	float: left!important;
+	display: block!important;
+	position:static!important;
+clear:none!important; }
+.row-50{
+margin:0!important;}
+.main-header,
+.main-body{
+border:none;}
+.pf .col_4{
+	width:100%!important;
+	margin-bottom: 30px;
+}
+.pf .col_4 img{
+	width: 200px!important;
+	float:left;
+	margin-right:20px!important;
+}
+.pf .col_4 h2{
+	float:left;
+	width: 320px;
+	color:#000;
+}
+.box-text{
+	float: right;
+	width: 380px;
+	color:#000;
+}
+
+.box-text .cB{
+	clear: none!important;
+}
+.philosophy{
+	background:#fff;
+	color:#000;
+}
+.gray{
+color:#000!important;
+}
+.logo img{
+	display:none;
+}
+.logo .print{
+	display:block!important;
+	width:260px!important;
+	margin: auto;
+}
+
+.logo{
+	margin: 20px;
+	text-align: center;
+	padding: 0!important;
+}
+
+.box-content .number{
+	background:#fff;
+	color:#000;
+	border:solid 1px #000;
+
+}
+
+.profile{
+	background:#fff;
+	border:solid 1px #ddd;
+}
+
+.owl-carousel .owl-item{
+	float:none!important;
+	display: block!important;
+
+}
+#container{color:#000!important;}
+
+
+.owl-carousel .owl-item img{
+width:50%!important;
+float:left}
+
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	height:auto!important
+}
