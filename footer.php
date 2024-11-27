@@ -1,30 +1,30 @@
     <!-- <?php
-      $locale = $args['locale'] ? $args['locale'] : 'ja';
-      $is_ja = $locale === 'ja';
+          $locale = $args['locale'] ? $args['locale'] : 'ja';
+          $is_ja = $locale === 'ja';
 
-      $home_url = $is_ja ? home_url() : home_url('en');
-      $text = array(
-        'footer_about' => $is_ja ? '『私の哲学』について' : 'About "My Philosophy"',
-        'footer_company' => $is_ja ? '運営会社' : 'Website is managed by ILI',
-        'footer_contact' => $is_ja ? 'お問い合わせ' : 'Inquiry',
-        'copyright' => $is_ja ? '私の哲学' : 'My Philosophy',
-      );
-    ?> -->
+          $home_url = $is_ja ? home_url() : home_url('en');
+          $text = array(
+            'footer_about' => $is_ja ? '『私の哲学』について' : 'About "My Philosophy"',
+            'footer_company' => $is_ja ? '運営会社' : 'Website is managed by ILI',
+            'footer_contact' => $is_ja ? 'お問い合わせ' : 'Inquiry',
+            'copyright' => $is_ja ? '私の哲学' : 'My Philosophy',
+          );
+          ?> -->
 
-<!-- footerの項目変更 -->
-<?php
-      $locale = $args['locale'] ? $args['locale'] : 'ja';
-      $is_ja = $locale === 'ja';
+    <!-- footerの項目変更 -->
+    <?php
+    $locale = $args['locale'] ? $args['locale'] : 'ja';
+    $is_ja = $locale === 'ja';
 
-      $home_url = $is_ja ? home_url() : home_url('en');
-      $text = array(
-        'footer_about' => $is_ja ? '『私の哲学』について' : 'About "My Philosophy"',
-        'footer_editing' => $is_ja ? '編集長について' : 'Editors Message',
-        'footer_past' => $is_ja ? '過去の出演者' : 'Past Performers',
-        'footer_company' => $is_ja ? '運営会社' : 'Website is managed by ILI',
-        'footer_contact' => $is_ja ? 'お問い合わせ' : 'Inquiry',
-        'copyright' => $is_ja ? '私の哲学' : 'My Philosophy',
-      );
+    $home_url = $is_ja ? home_url() : home_url('en');
+    $text = array(
+      'footer_about' => $is_ja ? '『私の哲学』について' : 'About "My Philosophy"',
+      'footer_editing' => $is_ja ? '編集長について' : 'Editors Message',
+      'footer_past' => $is_ja ? '過去の出演者' : 'Past Performers',
+      'footer_company' => $is_ja ? '運営会社' : 'Website is managed by ILI',
+      'footer_contact' => $is_ja ? 'お問い合わせ' : 'Inquiry',
+      'copyright' => $is_ja ? '私の哲学' : 'My Philosophy',
+    );
     ?>
 
     <footer id="footer">
@@ -36,41 +36,37 @@
             height="300"
             width="300"
             loading="lazy"
-            decoding="async"
-          />
+            decoding="async" />
         </a>
         <div class="footer-content">
           <div class="footer-menu">
             <a
               class="footer-menu-item"
-              href="<?php echo $home_url; ?>/about/"
-            ><?php echo $text['footer_about']; ?>
-          </a>
+              href="<?php echo $home_url; ?>/about/"><?php echo $text['footer_about']; ?>
+            </a>
             <a
               class="footer-menu-item"
-              href="https://myphilosophy.global/message/"
-            ><?php echo $text['footer_editing']; ?>
-          </a>
+              href="https://myphilosophy.global/message/"><?php echo $text['footer_editing']; ?>
+            </a>
             <a
               class="footer-menu-item"
-              href="<?php echo $home_url; ?>/archives/"
-            ><?php echo $text['footer_past']; ?>
-          </a>
+              href="<?php echo $home_url; ?>/archives/"><?php echo $text['footer_past']; ?>
+            </a>
             <a
               class="footer-menu-item"
               href="https://ili.inc/"
-              target="_blank"
-            ><?php echo $text['footer_company']; ?>
-          </a>
+              target="_blank"><?php echo $text['footer_company']; ?>
+            </a>
             <a
               class="footer-menu-item"
-              href="<?php echo $home_url; ?>/contact/"
-            ><?php echo $text['footer_contact']; ?></a>
+              href="<?php echo $home_url; ?>/contact/"><?php echo $text['footer_contact']; ?></a>
           </div>
           <span class="copyright" translate="no">©︎ <?php echo date('Y'); ?> <?php echo $text['copyright']; ?></span>
         </div>
       </div>
     </footer>
+
+
 
     <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/jquery/jquery.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/jquery/jquery-migrate.min.js"></script>
@@ -106,7 +102,8 @@
         });
       });
     </script>
-
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/humbergerMenu.js"></script>
     <?php wp_footer(); ?>
-  </body>
-</html>
+    </body>
+
+    </html>

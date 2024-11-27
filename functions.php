@@ -97,7 +97,7 @@ function search_template_redirect() {
   global $wp_query;
   $wp_query->is_search = true;
   $wp_query->is_home = false;
-  if (file_exists(TEMPLATEPATH . '/search.php')) { 
+  if (file_exists(TEMPLATEPATH . '/search.php')) {
     include(TEMPLATEPATH . '/search.php');
   }
   exit;
@@ -280,7 +280,7 @@ function adjust_date_title( $title, $sep, $seplocation ) {
 			$title = " $sep " . $date_title;
 		}
 	}
-	
+
 	return $title;
 }
 add_filter( 'wp_title', 'adjust_date_title', 10, 3 );
@@ -445,3 +445,22 @@ die($failed_text);
 // wpautopが自動的に段落を削除
 remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
+
+
+// jsの読み込み
+// archivepeページにのみ適用
+function add_js() {
+  if (is_archive()) {
+    wp_enqueue_script('onload-script', get_template_directory_uri() . '/assets/js/onLoad.js', array(), '1.0.0', true);
+  }
+}
+add_action('wp_enqueue_scripts', 'add_js');
+
+  // 正規表現で <p> タグで囲まれた特定の <img> タグを削除
+function remove_p_tags_from_img($content) {
+  $pattern = '/<p>\s*(<img[^>]*class=["\'](imgL|imgR)["\'][^>]*>)\s*<\/p>/i';
+  $replacement = '$1';
+  $content = preg_replace($pattern, $replacement, $content);
+  return $content;
+}
+add_filter('the_content', 'remove_p_tags_from_img');
