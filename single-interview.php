@@ -49,6 +49,9 @@
             <?php if( get_field('link_fr') ): ?>
             <a href="<?php the_field('link_fr'); ?>">French</a>
             <?php endif; ?>
+            <?php if( get_field('link_ko') ): ?>
+            <a href="<?php the_field('link_ko'); ?>">Korean</a>
+            <?php endif; ?>
           </div>
 
           <!---------------------------------------------------

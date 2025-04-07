@@ -12,7 +12,7 @@ Template Post Type: post, page, interview
 <div id="container">
   <div id="content">
     <div class="presents">
-      <a href="/en/">
+      <a href="<?php echo home_url( 'interview_en' ); ?>">
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/philosophy/new_philosophy/logo_philosophy_presents.png"
           alt='Presented by "My Philosophy®︎"'>
@@ -20,13 +20,13 @@ Template Post Type: post, page, interview
     </div>
     <div class="detailMain">
       <div class="taC logo pc">
-        <a class="scroll" href="/en/">
+        <a class="scroll" href="<?php echo home_url( 'interview_en' ); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/img/philosophy/new_philosophy/detail_main_title_en.png"
             alt="My Philosophy®︎ | Interview and Dialogue Series">
         </a>
       </div>
       <div class="taC logo sp">
-        <a class="scroll" href="/en/">
+        <a class="scroll" href="<?php echo home_url( 'interview_en' ); ?>">
           <img
             src="<?php echo get_template_directory_uri(); ?>/img/philosophy/new_philosophy/detail_main_title_sp_en.png"
             alt="My Philosophy®︎ | Interview and Dialogue Series">
@@ -55,6 +55,9 @@ Template Post Type: post, page, interview
             <?php endif; ?>
             <?php if( get_field('link_fr') ): ?>
             <a href="<?php the_field('link_fr'); ?>">French</a>
+            <?php endif; ?>
+            <?php if( get_field('link_ko') ): ?>
+            <a href="<?php the_field('link_ko'); ?>">Korean</a>
             <?php endif; ?>
           </div>
 <!---------------------------------------------------
@@ -89,4 +92,61 @@ Template Post Type: post, page, interview
   </div>
 </div>
 
-<?php get_footer(null, array('locale' => 'en_US')); ?>
+<!-- <?php get_footer(null, array('locale' => 'en_US')); ?> -->
+
+<footer id="footer">
+	<div class="container inner">
+		<a class="logo_en" href="<?php echo $home_url; ?>">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/philosophy/new_philosophy/img_footer_logo_en.png"
+				alt="私の哲学Presents" height="500" width="500" loading="lazy" decoding="async" />
+		</a>
+		<!-- <div class="footer-content">
+          <div class="footer-menu">
+            <a
+              class="footer-menu-item"
+              href="<?php echo $home_url; ?>/en/about/"
+            >About "My Philosophy</a>
+            <a
+              class="footer-menu-item"
+              href="https://ili.inc/"
+              target="_blank"
+            >Website is managed by ILI</a>
+            <a
+              class="footer-menu-item"
+              href="<?php echo $home_url; ?>/en/contact/"
+            >Inquiry</a>
+          </div> -->
+
+		<div class="footer-content">
+			<div class="footer-menu">
+				<a class="footer-menu-item"
+					href="<?php echo $home_url; ?>/en/about/">
+					About "My Philosophy
+				</a>
+				<a class="footer-menu-item"
+					href="https://myphilosophy.global/message/">
+					Editor's Message
+				</a>
+				<a class="footer-menu-item"
+					href="<?php echo $home_url; ?>/archives/">
+					Past performers
+				</a>
+				<a class="footer-menu-item" href="https://ili.inc/"
+					target="_blank">
+					Website is managed by ILI
+				</a>
+				<a class="footer-menu-item"
+					href="<?php echo $home_url; ?>/contact/">
+					Inquiry
+				</a>
+			</div>
+			<span class="copyright" translate="no">©︎ <?php echo date('Y'); ?> My Philosophy</span>
+		</div>
+
+	</div>
+</footer>
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/humbergerMenu.js"></script>
+</body>
+
+</html>

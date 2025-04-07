@@ -67,14 +67,13 @@
     </footer>
 
 
-
     <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/jquery/jquery.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/jquery/jquery-migrate.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/sticky.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/fancyBox/source/jquery.fancybox.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.parallax.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/easing.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/sp-slidemenu.js"></script>
+  
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/us.widgets.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/sticky.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
@@ -102,8 +101,14 @@
         });
       });
     </script>
+
+
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/humbergerMenu.js"></script>
+
     <?php wp_footer(); ?>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/sp-slidemenu.js" defer></script>
+
+  
     </body>
 
     </html>

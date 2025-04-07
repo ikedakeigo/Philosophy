@@ -38,14 +38,15 @@ $locale = $args['locale'] ? $args['locale'] : 'ja';
     <div class="menu-content">
       <button class="close-button" id="close-button"><i class="fa fa-times"></i></button>
       <div class="cntHdr">
-        <h1><a href="/" class="parentsLink"><img src="http://testwordpress.local:10090/wp-content/themes/MyPhilosophy/img/top/img_logo_phy.png" alt="私の哲学"></a></h1>
+        <h1><a href="/" class="parentsLink">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/top/img_logo_phy.png" alt="私の哲学"></a></h1>
         <p>時代を先導するリーダーズインタビュー</p>
       </div>
       <ul>
         <li><a href="/about/" target="_blank">『私の哲学』について</a></li>
         <li><a href="/message" target="_blank">編集長について</a></li>
         <li><a href="/archives" target="_blank">過去の出演者</a></li>
-        <li><a href="/https://ili.inc/" target="_blank">運営会社</a></li>
+        <li><a href="https://ili.inc/" target="_blank">運営会社</a></li>
         <li><a href="/contact" target="_blank">お問い合わせ</a></li>
       </ul>
     </div>

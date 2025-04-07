@@ -7,7 +7,7 @@
     'orderby' => 'date',
     'orderby' => 'meta_value_num',
     'meta_key' => 'interview_vol',
-    'posts_per_page' => -1,
+    'posts_per_page' => 60,
     'post_status' => 'publish',
     'has_password' => false,
   ));
@@ -19,7 +19,7 @@
 	  
 	<a href="https://amzn.asia/d/iaf48Ai" target="_blank">
       <img src="<?php echo get_template_directory_uri(); ?>/img/philosophy/philosophy/do_chan_3.jpg">
-    </a>  
+  </a>  
 	  
 	  <div id="myplace"></div>
   
@@ -44,8 +44,6 @@ document.getElementById('myplace').innerHTML = lists[rNo];
 </script>
 	  
 	  
-   
-    
   </div> 
   <h3 class="widget-title"><a href="https://myphilosophy.global/archives/">Milestone(2007~)</a></h3>
   <ul>
@@ -60,7 +58,14 @@ document.getElementById('myplace').innerHTML = lists[rNo];
     <?php endwhile; endif; wp_reset_query(); ?>
   </ul>
   <div class="cB"></div>
+
+<!-- 日本語記事一覧 -->
+  <div class="btnArcWrp side_sp"><a href="<?php echo home_url(); ?>/archives">一覧へ</a></div>
+
   <div id="banner-container" class="clearfix lg-hide xl-show" data-sticky_parent>
     <div id="banner" class="clearfix" data-sticky_column></div>
   </div>
 </div>
+
+
+

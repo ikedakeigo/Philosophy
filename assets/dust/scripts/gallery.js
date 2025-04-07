@@ -9,5 +9,4 @@ var Gallery = function () {
         }
 
     };
-
 }();

@@ -40,17 +40,15 @@
 	  <div class="cntHdr">
 	  　<h1><img src="<?php echo get_template_directory_uri(); ?>/img/top/img_logo_phy.png" alt="『私の哲学』" ></h1>
 		  <p>時代を先導するリーダーズインタビュー</p>
-		  
-		  <div class="l-header__navigation">
+		   
+	  <div class="l-header__navigation">
         <div class="l-header__navigation-inner" data-transition>
-                    <a
-            class="l-header__cta"
-            href="/en/"
-          ><img src="<?php echo get_template_directory_uri(); ?>/img/top/img_icm_en.png" alt="EN" ></a>
+		<a class="l-header__cta" href="<?php echo home_url( 'interview_en_list' ); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/top/img_icm_en.png" alt="EN" ></a>
           
         </div>
       </div>
-	  </div>
+	</div>
 	  
 	  <video controls autoplay muted playsinline>
   <source src="<?php echo get_template_directory_uri(); ?>/img/top/top_movie.mov" type="video/mp4" />
@@ -118,8 +116,7 @@ echo '<img src="' . esc_url(get_template_directory_uri()) . '/img/noimg.png" alt
 								</a>
 							</dt>
 							<dd>
-					
-<?php the_excerpt(); ?>
+<?php echo custom_field_excerpt_with_dots('lead_txt'); ?>
 		<a href="<?php the_permalink(); ?>">	
 							 READ
 							</a>
@@ -160,7 +157,6 @@ echo '<img src="' . esc_url(get_template_directory_uri()) . '/img/noimg.png" alt
 			</ul> <br style="clear: both;">
 			  
 		</div>
-		  
 		  
 		  <div class="cntIntWrp">
 			<h2>編集長厳選</h2> 

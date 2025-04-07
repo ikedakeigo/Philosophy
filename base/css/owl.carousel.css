@@ -11,6 +11,7 @@
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
+	
 }
 /* display none until init */
 .owl-carousel{

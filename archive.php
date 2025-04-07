@@ -3,42 +3,44 @@ get_header(null, $args);
 
 $locale = $args['locale'] ? $args['locale'] : 'ja';
 $is_ja = $locale === 'ja';
+
+// ここで英語と日本語の投稿タイプを分けて設定
 $the_query = new WP_Query(array(
-  'post_type' => $is_ja ? 'interview' : 'interview_en',
-  'order' => 'DESC',
-  'orderby' => 'meta_value_num',
-  'meta_key' => 'interview_vol',
-  'posts_per_page' => -1,
-  'post_status' => 'publish',
-  'has_password' => false,
+    'post_type' => $is_ja ? 'interview' : 'interview_en', // 英語の場合は 'interview_en'
+    'order' => 'DESC',
+    'orderby' => 'meta_value_num',
+    'meta_key' => 'interview_vol',
+    'posts_per_page' => -1,
+    'post_status' => 'publish',
+    'has_password' => false,
 ));
 
-$home_url = $is_ja ? home_url() : home_url('en');
+$home_url = $is_ja ? home_url() : home_url('en'); // 英語のURL設定
 $text = array(
-  'main_alt' => $is_ja ? 'インタビューシリーズ『私の哲学®︎』' : 'My Philosophy®︎ | Interview and Dialogue Series',
-  'about_button' => $is_ja ? '『私の哲学』について' : '"About My Philosophy"'
+    'main_alt' => $is_ja ? 'インタビューシリーズ『私の哲学®︎』' : 'My Philosophy®︎ | Interview and Dialogue Series',
+    'about_button' => $is_ja ? '『私の哲学』について' : '"About My Philosophy"'
 );
 
 $image = array(
-  'main_pc' => $is_ja
-    ? get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_pc.png'
-    : get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_pc_en.png',
-  'main_sp' => $is_ja
-    ? get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_sp.png'
-    : get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_sp_en.png',
+    'main_pc' => $is_ja
+        ? get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_pc.png'
+        : get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_pc_en.png',
+    'main_sp' => $is_ja
+        ? get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_sp.png'
+        : get_template_directory_uri() . '/img/philosophy/new_philosophy/img_top_kv_catch_sp_en.png',
 );
 ?>
 
+<!-- メニューの表示 -->
 <span class="menu-button lg-show"><i class="fa fa-bars"></i></span>
 
 <?php get_template_part('md-slidemenu-interview', null, $args); ?>
 
+<!-- ページスタイルの設定 -->
 <style>
-  /* cssを完全に読み込むまで非表示 */
   body {
     visibility: hidden;
   }
-
   body.loaded {
     visibility: visible;
   }
@@ -50,27 +52,29 @@ $image = array(
       <h1><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/top/img_logo_phy.png" alt="私の哲学"></a></h1>
       <p>時代を先導するリーダーズインタビュー</p>
     </div>
+
     <?php if (!$is_ja): ?>
       <div class="top-category pB60">
         <div class="container">
           <h2 class="top-heading">Interview Directory</h2>
           <div class="interview-directory">
             <?php
+            // 英語のインタビュータグを取得
             $taxonomy = 'interview_tag_en';
             $tags = get_terms($taxonomy);
             foreach ($tags as $tag):
-              $is_show = get_field('interview_tag_show', $taxonomy . '_' . $tag->term_id);
-              if ($is_show):
+                $is_show = get_field('interview_tag_show', $taxonomy . '_' . $tag->term_id);
+                if ($is_show):
             ?>
                 <a class="interview-directory__item" href="<?php echo get_term_link($tag); ?>">
                   <?php echo $tag->name; ?>
                 </a>
-            <?php endif;
-            endforeach; ?>
+            <?php endif; endforeach; ?>
           </div>
         </div>
       </div>
     <?php endif; ?>
+
     <div class="container">
       <?php if (!$is_ja): ?>
         <h2 class="top-heading">All Interviews</h2>

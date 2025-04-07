@@ -48,7 +48,19 @@ document.getElementById('myplace').innerHTML = lists[rNo];
   </div> 
 	<h3 class="widget-title"><a href="https://myphilosophy.global/archives/">Milestone(2007~)</a></h3>
   <ul>
-    <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+  <?php
+
+  $args = array(
+    'post_type' => 'interview_en', 
+    'posts_per_page' => 60,         
+    'orderby' => 'date',           
+    'order' => 'DESC',
+	'post_status' => 'publish'
+  );
+  $custom_query = new WP_Query($args);
+
+  if ($custom_query->have_posts()) :
+    while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
       <li class="clearfix">
         <a href="<?php the_permalink(); ?>">
           <img src="<?php the_field('thumb_sidebar'); ?>" width="70" height="70" class="thumb">
@@ -56,10 +68,17 @@ document.getElementById('myplace').innerHTML = lists[rNo];
           <p class="phil-title"><?php echo wp_kses_post(get_field('position')); ?></p>
         </a>
       </li>
-    <?php endwhile; endif; wp_reset_query(); ?>
+      <?php endwhile; else : ?>
+    <?php endif; wp_reset_postdata(); ?>
   </ul>
+
   <div class="cB"></div>
+<!-- 一覧のボタン -->
+  <div class="btnArcWrp side_sp"><a href="<?php echo home_url('/en/interview'); ?>" target="_blank">View All</a></div>
+
   <div id="banner-container" class="clearfix lg-hide xl-show" data-sticky_parent>
     <div id="banner" class="clearfix" data-sticky_column></div>
   </div>
 </div>
+
+

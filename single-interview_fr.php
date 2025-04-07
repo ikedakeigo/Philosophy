@@ -57,6 +57,9 @@ Template Post Type: post, page, interview
             <?php if( get_field('link_ch') ): ?>
             <a href="<?php the_field('link_ch'); ?>">Chinese</a>
             <?php endif; ?>
+            <?php if( get_field('link_ko') ): ?>
+            <a href="<?php the_field('link_ko'); ?>">Korean </a>
+            <?php endif; ?>
           </div>
 <!-- -------------------------------------------------
 言語切り替えボタン

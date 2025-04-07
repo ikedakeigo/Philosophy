@@ -93,18 +93,18 @@ function custom_search_template($template){
 }
 
 //検索ワードが0や未入力のときにもsearch.phpを使う
-function search_template_redirect() {
-  global $wp_query;
-  $wp_query->is_search = true;
-  $wp_query->is_home = false;
-  if (file_exists(TEMPLATEPATH . '/search.php')) {
-    include(TEMPLATEPATH . '/search.php');
-  }
-  exit;
-}
-if (isset($_GET['s']) && $_GET['s'] == false) {
-  add_action('template_redirect', 'search_template_redirect');
-}
+// function search_template_redirect() {
+//   global $wp_query;
+//   $wp_query->is_search = true;
+//   $wp_query->is_home = false;
+//   if (file_exists(TEMPLATEPATH . '/search.php')) { 
+//     include(TEMPLATEPATH . '/search.php');
+//   }
+//   exit;
+// }
+// if (isset($_GET['s']) && $_GET['s'] == false) {
+//   add_action('template_redirect', 'search_template_redirect');
+// }
 
 //ページネーション
 function pagination($pages = '', $range = 2){
@@ -191,15 +191,15 @@ register_nav_menus(array(
     )
 );
 
-function new_excerpt_mblength($length) {
-     return 100;
-}
-add_filter('excerpt_mblength', 'new_excerpt_mblength');
+// function new_excerpt_mblength($length) {
+//      return 100;
+// }
+// add_filter('excerpt_mblength', 'new_excerpt_mblength');
 
-function new_excerpt_more($more) {
-    return '...';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
+// function new_excerpt_more($more) {
+//     return '...';
+// }
+// add_filter('excerpt_more', 'new_excerpt_more');
 
 
 //記事別にhead内に追加
@@ -280,26 +280,70 @@ function adjust_date_title( $title, $sep, $seplocation ) {
 			$title = " $sep " . $date_title;
 		}
 	}
-
+	
 	return $title;
 }
 add_filter( 'wp_title', 'adjust_date_title', 10, 3 );
 
+
 //概要（抜粋）の文字数調整
-// function my_excerpt_length($length) {
-// 	return 100;
+// function custom_excerpt_length($length) {
+//   if (is_post_type_archive('interview_en') || is_singular('interview_en')) {
+//       return 200; // 英語の投稿のみ200文字
+//   }
+//   return 100; // その他はデフォルトの100文字
 // }
-// add_filter('excerpt_length', 'my_excerpt_length');
+// add_filter('excerpt_length', 'custom_excerpt_length');
+
+// function custom_field_excerpt_with_dots($field_name, $length_en = 200, $length_ja = 100) {
+//   $field_content = get_field($field_name);
+
+//   if (!$field_content) {
+//       return ''; 
+//   }
+
+//   $text = strip_tags($field_content); // HTMLタグを取り除く
+
+//   $is_english = preg_match('/^[a-zA-Z\s.,!?]+$/', substr($text, 0, 200)); // 最初の200文字で英語かどうかを判定
+
+//   $length = $is_english ? $length_en : $length_ja;
+
+//   $excerpt = mb_substr($text, 0, $length); // 指定文字数で切り取る
+
+//   if (mb_strlen($text) > $length) {
+//       $excerpt .= '...'; 
+//   }
+
+//   return $excerpt;
+// }
 
 
-function custom_excerpt_length($length) {
-  if (is_post_type_archive('interview_en') || is_singular('interview_en')) {
-      return 200; // 英語の投稿のみ200文字
+function custom_field_excerpt_with_dots($field_name, $length_en = 200, $length_ja = 100) {
+  $field_content = get_field($field_name);
+
+  if (!$field_content) {
+      return ''; 
   }
-  return 100; // その他はデフォルトの100文字
-}
-add_filter('excerpt_length', 'custom_excerpt_length');
 
+  $text = strip_tags($field_content); // HTMLタグを除去
+  $text = trim($text); // 前後の空白を削除
+
+  // 英語判定を改善（単語、数字、基本的な記号を許容）
+  $is_english = preg_match('/^[\x20-\x7E]+$/u', substr($text, 0, 200));
+
+  // 英語なら長め、そうでなければ短め
+  $length = $is_english ? $length_en : $length_ja;
+
+  // 指定文字数で切り取る
+  $excerpt = mb_substr($text, 0, $length, 'UTF-8');
+
+  // 元の文字数が指定文字数を超えている場合は "..." を付ける
+  if (mb_strlen($text, 'UTF-8') > $length) {
+      $excerpt .= '...'; 
+  }
+
+  return $excerpt;
+}
 
 
 
@@ -441,14 +485,13 @@ die($failed_text);
 }
 
 
-
 // wpautopが自動的に段落を削除
 remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
 
 
 // jsの読み込み
-// archivepeページにのみ適用
+// archiveページにのみ適用
 function add_js() {
   if (is_archive()) {
     wp_enqueue_script('onload-script', get_template_directory_uri() . '/assets/js/onLoad.js', array(), '1.0.0', true);

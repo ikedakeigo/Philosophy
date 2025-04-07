@@ -1082,7 +1082,7 @@ scrolltotop.init();
 				addIconSrc: '/assets/img/ico_blank.gif'
 			}, options);
 			var uri = new $.yuga.Uri(location.href);
-			var e = $('a[href^="http://"], a[href^="https://"], a.exLink, a[href$=".pdf"]').not('a[href^="http://www.youtube.com/"],a[href^="https://www.youtube.com/"],a[href^="' + uri.schema + '://' + uri.host + '/' + '"]').not(c.notWindowURL);
+			var e = $('a[href^="http://"], a[href^="https://"], a.exLink, a[href$=".pdf"]').not('a[href^="http://www.youtube.com/"],a[href^="https://www.youtube.com/"],a[href^="' + uri.schema + '://' + uri.host + '/' + '"]').not(c.notWindowURL).not('.l-header__cta');
 			if (c.windowOpen) {
 				e.click(function(){
 					window.open(this.href, '_blank');
@@ -1102,8 +1102,6 @@ scrolltotop.init();
 		}
 	};
 })(jQuery);
-
-
 
 
 	  

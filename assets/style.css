@@ -497,6 +497,16 @@ a.nohover:hover img {
 	width: 100%;
 }
 
+#footer .logo_en {
+	width: 170px;
+}
+
+#footer .logo_en img {
+	display: flex;
+	height: auto;
+	width: 100%;
+}
+
 #footer .footer-content {
 	margin-left: auto;
 }
@@ -548,6 +558,10 @@ a.nohover:hover img {
 		transform: translate(0, 0);
 	}
 
+	#footer .logo_en {
+		margin: 20px 0;
+	}
+
 	#footer .footer-content {
 		margin: auto;
 		text-align: center;
@@ -591,10 +605,6 @@ a.nohover:hover img {
     height: 100%; /* テキストに高さを揃える */
     object-fit: cover; /* 縦横比を保ちつつ調整 */
 }
-
-
-
-
 
 
 
@@ -658,26 +668,29 @@ a.nohover:hover img {
 
 .cntHdr {
 	width: 100%;
-	height: 180px;
+	height: 210px;
 	text-align: center;
+	
 }
 
 .cntHdr h1 {
-	margin: 5px auto 0;
+	margin: 30px auto 0;
 }
 
 .cntHdr h1.en {
-	margin-top: 20px;
+	margin-top: 0;
 }
 
 .cntHdr h1 img {
 	width: 350px !important;
-	height: 70px !important;
+	/* height: 70px !important; */
+	height:auto;
 }
 
 .cntHdr h1.en img {
 	width: 350px !important;
 	height: 35px !important;
+	margin-top: 60px;
 }
 
 .cntHdr p {
@@ -842,6 +855,14 @@ video {
 	color: #FFFFFF;
 	text-align: center;
 	font-size: 16px;
+}
+
+
+@media (max-width: 667px) {
+	.side_sp {
+		margin-top: 25px;
+	}
+
 }
 
 .btnArcWrp a:hover {
@@ -1134,9 +1155,6 @@ video {
 }
 
 @media (max-width: 767px) {
-
-
-
 	.pc {
 		display: none !important;
 	}
@@ -1152,13 +1170,11 @@ video {
 	}
 
 	.cntHdr h1 {
-		margin: -5px auto 0;
+		margin: 30px auto 0;
 	}
 
-
-
 	.cntHdr h1.en {
-		margin-top: -10px;
+		margin-top: 0;
 	}
 
 	.cntHdr h1 img {
@@ -1169,6 +1185,7 @@ video {
 	.cntHdr h1.en img {
 		width: 70% !important;
 		height: 100% !important;
+		margin-top: 30px;
 	}
 
 	.cntHdr p {
@@ -2587,6 +2604,7 @@ ul.breadcrumbs li.last a:hover {
 /*slidemenu*/
 #mobile-menu {
 	background-color: #1D1D1D;
+	display: none !important;
 }
 
 #mobile-menu li {}
@@ -4419,6 +4437,7 @@ span .fa-external-link {
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
+	padding-right: 10px;
 }
 
 .editor {
@@ -5180,7 +5199,9 @@ ul.ctBtn li a {
 .LangBtn a {
 	color: #fff;
 	/* padding: 8px 15%; */
-	padding: 8px 10%;
+	/* padding: 8px 10%; */
+	padding: 8px 0;
+	width: 230px;
 	background: #333;
 	font-size: 20px;
 	font-family: "Times New Roman", "ﾃｦﾂｸﾂｸﾃｦﾋ愬ｽﾃｦﾅ督�", YuMincho, "ﾃ｣ﾆ停凖｣ﾆ陳ｩﾃ｣窶堋ｮﾃ｣ﾆ椎ｽﾃｦﾋ愬ｽﾃｦﾅ督� ProN W3", "Hiragino Mincho ProN", "ﾃ｣ﾆ陳｡ﾃ｣窶堋､ﾃ｣ﾆ陳ｪﾃ｣窶堋ｪ", Meiryo, serif;
@@ -5194,7 +5215,8 @@ ul.ctBtn li a {
 .LangBtn a:hover {
 	color: #333;
 	/* padding: 8px 15%; */
-	padding: 8px 10%;
+	/* padding: 8px 10%; */
+	padding: 8px 0;
 	background: #ececec;
 	/*border: 2px solid #333;*/
 }
@@ -5202,11 +5224,13 @@ ul.ctBtn li a {
 @media only screen and (max-width: 800px) {
 
 	.LangBtn a {
-		padding: 8px 20px;
+		/* padding: 8px 20px; */
+		padding: 8px 0;
 	}
 
 	.LangBtn a:hover {
-		padding: 8px 20px;
+		/* padding: 8px 20px; */
+		padding: 8px 0;
 	}
 }
 
@@ -5221,12 +5245,13 @@ ul.ctBtn li a {
 	.LangBtn a {
 		/* margin-bottom: 30px !important; */
 		clear: both;
-
-		padding: 8px 20px;
+		/* padding: 8px 20px; */
+		padding: 8px 0;
 	}
 
 	.LangBtn a:hover {
-		padding: 8px 20px;
+		/* padding: 8px 20px; */
+		padding: 8px 0;
 	}
 }
 
